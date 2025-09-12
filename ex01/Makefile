@@ -6,15 +6,13 @@ SRCS 	= main.cpp phonebook.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 
-INC		= phonebook.hpp
-
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.cpp
-	@$(CC) $(CFLAGS) -I $(INC) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
