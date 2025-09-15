@@ -6,33 +6,33 @@
 /*   By: hbousset <hbousset@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 16:53:35 by hbousset          #+#    #+#             */
-/*   Updated: 2025/09/12 17:01:29 by hbousset         ###   ########.fr       */
+/*   Updated: 2025/09/12 18:18:44 by hbousset         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
 
-void Contact::setFirstName(const std::string& firstName)
+void Contact::setFirstName(std::string firstName)
 {
 	this->firstName = firstName;
 }
 
-void Contact::setLastName(const std::string& lastName)
+void Contact::setLastName(std::string lastName)
 {
 	this->lastName = lastName;
 }
 
-void Contact::setNickname(const std::string& nickname)
+void Contact::setNickname(std::string nickname)
 {
 	this->nickname = nickname;
 }
 
-void Contact::setPhoneNumber(const std::string& phoneNumber)
+void Contact::setPhoneNumber(std::string phoneNumber)
 {
 	this->phoneNumber = phoneNumber;
 }
 
-void Contact::setDarkestSecret(const std::string& darkestSecret)
+void Contact::setDarkestSecret(std::string darkestSecret)
 {
 	this->darkestSecret = darkestSecret;
 }

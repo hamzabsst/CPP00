@@ -29,11 +29,11 @@ private:
 	std::string darkestSecret;
 
 public:
-	void setFirstName(const std::string& firstName);
-	void setLastName(const std::string& lastName);
-	void setNickname(const std::string& nickname);
-	void setPhoneNumber(const std::string& phoneNumber);
-	void setDarkestSecret(const std::string& darkestSecret);
+	void setFirstName(std::string firstName);
+	void setLastName(std::string lastName);
+	void setNickname(std::string nickname);
+	void setPhoneNumber(std::string phoneNumber);
+	void setDarkestSecret(std::string darkestSecret);
 
 	std::string getFirstName() const;
 	std::string getLastName() const;
