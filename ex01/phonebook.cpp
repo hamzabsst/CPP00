@@ -14,16 +14,10 @@
 
 PhoneBook::PhoneBook() : contactCount(0), oldestIndex(0) {}
 
-std::string PhoneBook::truncateString(const std::string& str, size_t width) const {
-	if (str.length() > width)
-		return str.substr(0, width - 1) + ".";
-	return str;
-}
-
 void PhoneBook::addContact()
 {
-	std::string input;
-	Contact newContact;
+	std::string	input;
+	Contact		newContact;
 
 	std::cout << "Enter first name: ";
 	std::getline(std::cin, input);
@@ -59,6 +53,14 @@ void PhoneBook::addContact()
 		std::cout << "Error: Phone number cannot be empty!" << std::endl;
 		return;
 	}
+	for (size_t i = 0; i < input.length(); i++)
+	{
+		if (!std::isdigit(input[i]))
+		{
+			std::cout << "Error: Phone number must contain only digits!" << std::endl;
+			return;
+		}
+	}
 	newContact.setPhoneNumber(input);
 
 	std::cout << "Enter darkest secret: ";
@@ -83,6 +85,19 @@ void PhoneBook::addContact()
 	std::cout << "Contact added successfully!" << std::endl;
 }
 
+void PhoneBook::displayContactDetails(int index) const
+{
+	if (index < 0 || index >= contactCount || contacts[index].isEmpty())
+	{
+		std::cout << "Error: Invalid index!" << std::endl;
+		return;
+	}
+
+	std::cout << std::endl;
+	contacts[index].displayContact();
+	std::cout << std::endl;
+}
+
 void PhoneBook::displayContactList() const
 {
 	std::cout << "|" << std::setw(10) << "Index" << "|";
@@ -101,18 +116,11 @@ void PhoneBook::displayContactList() const
 		}
 	}
 }
-
-void PhoneBook::displayContactDetails(int index) const
+std::string PhoneBook::truncateString(std::string str, size_t width) const
 {
-	if (index < 0 || index >= contactCount || contacts[index].isEmpty())
-	{
-		std::cout << "Error: Invalid index!" << std::endl;
-		return;
-	}
-
-	std::cout << std::endl;
-	contacts[index].displayContact();
-	std::cout << std::endl;
+	if (str.length() > width)
+		return str.substr(0, width - 1) + ".";
+	return str;
 }
 
 void PhoneBook::searchContacts() const
@@ -122,20 +130,17 @@ void PhoneBook::searchContacts() const
 		std::cout << "No contacts available!" << std::endl;
 		return;
 	}
-
 	displayContactList();
 
 	std::cout << "Enter the index of the contact to display: ";
 	std::string input;
 	std::getline(std::cin, input);
 
-	if (input.length() == 1 && std::isdigit(input[0])) {
-
+	if (input.length() == 1 && std::isdigit(input[0]))
+	{
 		int index = input[0] - '0';
 		displayContactDetails(index);
 	}
 	else
-	{
 		std::cout << "Error: Invalid index format!" << std::endl;
-	}
 }

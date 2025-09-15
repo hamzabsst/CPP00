@@ -59,7 +59,7 @@ public:
 	void searchContacts() const;
 	void displayContactList() const;
 	void displayContactDetails(int index) const;
-	std::string truncateString(const std::string& str, size_t width) const;
+	std::string truncateString(std::string str, size_t width) const;
 };
 
 #endif
