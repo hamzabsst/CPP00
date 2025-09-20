@@ -85,7 +85,7 @@ void PhoneBook::addContact()
 	std::cout << "Contact added successfully!" << std::endl;
 }
 
-void PhoneBook::displayContactDetails(int index) const
+void PhoneBook::displayContactDetails(int index)
 {
 	if (index < 0 || index >= contactCount || contacts[index].isEmpty())
 	{
@@ -98,7 +98,7 @@ void PhoneBook::displayContactDetails(int index) const
 	std::cout << std::endl;
 }
 
-void PhoneBook::displayContactList() const
+void PhoneBook::displayContactList()
 {
 	std::cout << "|" << std::setw(10) << "Index" << "|";
 	std::cout << std::setw(10) << "First Name" << "|";

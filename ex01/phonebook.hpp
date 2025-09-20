@@ -35,14 +35,14 @@ public:
 	void setPhoneNumber(std::string phoneNumber);
 	void setDarkestSecret(std::string darkestSecret);
 
-	std::string getFirstName() const;
-	std::string getLastName() const;
-	std::string getNickname() const;
-	std::string getPhoneNumber() const;
-	std::string getDarkestSecret() const;
+	std::string getFirstName();
+	std::string getLastName();
+	std::string getNickname();
+	std::string getPhoneNumber();
+	std::string getDarkestSecret();
 
-	bool isEmpty() const;
-	void displayContact() const;
+	bool isEmpty();
+	void displayContact();
 };
 
 class PhoneBook
@@ -56,10 +56,10 @@ public:
 	PhoneBook();
 
 	void addContact();
-	void searchContacts() const;
-	void displayContactList() const;
-	void displayContactDetails(int index) const;
-	std::string truncateString(std::string str, size_t width) const;
+	void searchContacts();
+	void displayContactList();
+	void displayContactDetails(int index);
+	std::string truncateString(std::string str);
 };
 
 #endif
