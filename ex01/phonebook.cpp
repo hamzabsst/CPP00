@@ -110,20 +110,20 @@ void PhoneBook::displayContactList()
 		if (!contacts[i].isEmpty())
 		{
 			std::cout << "|" << std::setw(10) << i << "|";
-			std::cout << std::setw(10) << truncateString(contacts[i].getFirstName(), 10) << "|";
-			std::cout << std::setw(10) << truncateString(contacts[i].getLastName(), 10) << "|";
-			std::cout << std::setw(10) << truncateString(contacts[i].getNickname(), 10) << "|" << std::endl;
+			std::cout << std::setw(10) << truncateString(contacts[i].getFirstName()) << "|";
+			std::cout << std::setw(10) << truncateString(contacts[i].getLastName()) << "|";
+			std::cout << std::setw(10) << truncateString(contacts[i].getNickname()) << "|" << std::endl;
 		}
 	}
 }
-std::string PhoneBook::truncateString(std::string str, size_t width) const
+std::string PhoneBook::truncateString(std::string str)
 {
-	if (str.length() > width)
-		return str.substr(0, width - 1) + ".";
+	if (str.length() > 10)
+		return str.substr(0, 9) + ".";
 	return str;
 }
 
-void PhoneBook::searchContacts() const
+void PhoneBook::searchContacts()
 {
 	if (contactCount == 0)
 	{
