@@ -37,37 +37,37 @@ void Contact::setDarkestSecret(std::string darkestSecret)
 	this->darkestSecret = darkestSecret;
 }
 
-std::string Contact::getFirstName() const
+std::string Contact::getFirstName()
 {
 	return firstName;
 }
 
-std::string Contact::getLastName() const
+std::string Contact::getLastName()
 {
 	return lastName;
 }
 
-std::string Contact::getNickname() const
+std::string Contact::getNickname()
 {
 	return nickname;
 }
 
-std::string Contact::getPhoneNumber() const
+std::string Contact::getPhoneNumber()
 {
 	return phoneNumber;
 }
 
-std::string Contact::getDarkestSecret() const
+std::string Contact::getDarkestSecret()
 {
 	return darkestSecret;
 }
 
-bool Contact::isEmpty() const
+bool Contact::isEmpty()
 {
 	return firstName.empty();
 }
 
-void Contact::displayContact() const
+void Contact::displayContact()
 {
 	std::cout << "First Name: " << firstName << std::endl;
 	std::cout << "Last Name: " << lastName << std::endl;
