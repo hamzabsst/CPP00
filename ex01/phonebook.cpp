@@ -6,13 +6,19 @@
 /*   By: hbousset <hbousset@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 02:03:55 by hbousset          #+#    #+#             */
-/*   Updated: 2025/09/12 18:33:28 by hbousset         ###   ########.fr       */
+/*   Updated: 2025/09/20 18:32:41 by hbousset         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
 
-PhoneBook::PhoneBook() : contactCount(0), oldestIndex(0) {}
+//constructor
+PhoneBook::PhoneBook()
+{
+	contactCount = 0;
+	oldestIndex = 0;
+}
+
 
 void PhoneBook::addContact()
 {
