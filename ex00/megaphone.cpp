@@ -6,12 +6,11 @@
 /*   By: hbousset <hbousset@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 00:32:12 by hbousset          #+#    #+#             */
-/*   Updated: 2025/08/02 01:44:58 by hbousset         ###   ########.fr       */
+/*   Updated: 2025/09/21 18:51:56 by hbousset         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <ctype.h>
 
 int	main(int ac, char **av)
 {
